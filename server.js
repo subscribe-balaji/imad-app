@@ -17,8 +17,51 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+var atricle1 = {
+    title: 'Article1',
+    heading: 'Article1',
+    date: '22-Aug-2017',
+    content: `<p>
+                This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1.  
+              </p>
+              <p>
+                This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. 
+              </p>`
+};
+
+function createtemplate (data) {
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    var htmltemplate = `<html>
+        <head>
+            <title>
+                Article1
+            </title>
+            <link href = '/ui/style.css' rel='stylesheet' />
+        </head>
+        <body>
+            <div class='class1'>
+                <div>
+                    <a href='/'>Home<hr></a>
+                </div>
+                <h3>
+                    Article1
+                </h3>
+                <div>
+                    Date: 21-Aug-2017
+                </div>
+            </div>
+        </body>
+    </html>`;
+    
+    return htmltemplate;
+}
+
 app.get('/article1', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+  //res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+  res.send(createtemplate(article1));
 });
 
 app.get('/article2', function (req, res) {
