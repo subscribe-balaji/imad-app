@@ -88,11 +88,11 @@ function createtemplate (data) {
 
 app.get('/article1', function (req, res) {
   //res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
-  res.send(createtemplate(article1));
+  res.send(createtemplate(articles[article1]));
 });
 
 app.get('/article2', function (req, res) {
-  res.send(createtemplate(article2));
+  res.send(createtemplate(articles[article2]));
 });
 
 app.get('/article3', function (req, res) {
