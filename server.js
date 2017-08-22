@@ -53,7 +53,7 @@ var articles = {
     }
 };
 
-function createtemplate (data) {
+function createTemplate (data) {
     var title = data.title;
     var heading = data.heading;
     var date = data.date;
@@ -88,11 +88,11 @@ function createtemplate (data) {
 
 app.get('/article1', function (req, res) {
   //res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
-  res.send(createtemplate(articles['article1']));
+  res.send(createTemplate(articles['article1']));
 });
 
 app.get('/article2', function (req, res) {
-  res.send(createtemplate(articles[article2]));
+  res.send(createTemplate(articles[article2]));
 });
 
 app.get('/article3', function (req, res) {
