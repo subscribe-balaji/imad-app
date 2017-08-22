@@ -93,6 +93,7 @@ app.get('/:articlename', function (req, res) {
 });
 
 /*
+Not required anymore
 app.get('/article2', function (req, res) {
   res.send(createTemplate(articles[article2]));
 });
