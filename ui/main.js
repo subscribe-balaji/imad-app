@@ -5,7 +5,7 @@ newvar.innerHTML = "Changed text";
 var newvar = document.getElementById('madi');
 var marginLeft = 0;
 function moveRight() {
-    marginLeft = marginLeft + 5;
+    marginLeft = marginLeft + 1;
     newvar.style.marginLeft = marginLeft + 'px';
 }
 newvar.onclick = function() {
