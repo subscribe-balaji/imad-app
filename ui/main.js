@@ -1,14 +1,7 @@
-console.log('Loaded!');
-var newvar = document.getElementById('main-text');
-newvar.innerHTML = "Changed text";
-
-var newvar = document.getElementById('madi');
-var marginLeft = 0;
-function moveRight() {
-    marginLeft = marginLeft + 1;
-    newvar.style.marginLeft = marginLeft + 'px';
-}
-newvar.onclick = function() {
-    //newvar.style.marginLeft = '90px';
-    var interval = setInterval(moveRight, 100);
+var button = document.getElementById('counter');
+var counter = 0;
+button.onclick = function() {
+    counter = counter+1;
+    var count = document.getElementById('count');
+    count.innerHTML(counter.toString());
 };
