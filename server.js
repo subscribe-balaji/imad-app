@@ -86,9 +86,10 @@ function createTemplate (data) {
     return htmltemplate;
 }
 
-app.get('/article1', function (req, res) {
+app.get('/:articlename', function (req, res) {
   //res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
-  res.send(createTemplate(articles['article1']));
+  var articlename = 'article1';
+  res.send(createTemplate(articles[articlename]));
 });
 
 app.get('/article2', function (req, res) {
