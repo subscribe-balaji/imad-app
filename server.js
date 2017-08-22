@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var articles = {
-    article1: {
+    'article1': {
         title: 'Article1',
         heading: 'Article1',
         date: '22-Aug-2017',
@@ -29,7 +29,7 @@ var articles = {
                     This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. 
                   </p>`
     },
-    article2: {
+    'article2': {
         title: 'Article2',
         heading: 'Article2',
         date: '22-Aug-2017',
@@ -40,7 +40,7 @@ var articles = {
                     Second paragraph. 
                   </p>`    
     },
-    article3: {
+    'article3': {
         title: 'Article3',
         heading: 'Article3',
         date: '22-Aug-2017',
