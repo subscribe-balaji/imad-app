@@ -37,7 +37,7 @@ function createtemplate (data) {
     var htmltemplate = `<html>
         <head>
             <title>
-                Article1
+                ${title}
             </title>
             <link href = '/ui/style.css' rel='stylesheet' />
         </head>
@@ -47,10 +47,13 @@ function createtemplate (data) {
                     <a href='/'>Home<hr></a>
                 </div>
                 <h3>
-                    Article1
+                    ${heading}
                 </h3>
                 <div>
-                    Date: 21-Aug-2017
+                    Date: ${date}
+                </div>
+                <div>
+                    ${content}
                 </div>
             </div>
         </body>
