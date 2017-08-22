@@ -17,16 +17,40 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var article1 = {
-    title: 'Article1',
-    heading: 'Article1',
-    date: '22-Aug-2017',
-    content: `<p>
-                This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1.  
-              </p>
-              <p>
-                This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. 
-              </p>`
+var articles = {
+    article1: {
+        title: 'Article1',
+        heading: 'Article1',
+        date: '22-Aug-2017',
+        content: `<p>
+                    This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1. This is the first paragraph of Article1.  
+                  </p>
+                  <p>
+                    This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. This is the second paragraph. 
+                  </p>`
+    },
+    article2: {
+        title: 'Article2',
+        heading: 'Article2',
+        date: '22-Aug-2017',
+        content: `<p>
+                    Article2
+                  </p>
+                  <p>
+                    Second paragraph. 
+                  </p>`    
+    },
+    article3: {
+        title: 'Article3',
+        heading: 'Article3',
+        date: '22-Aug-2017',
+        content: `<p>
+                    Article3
+                  </p>
+                  <p>
+                    Second paragraph. 
+                  </p>`    
+    }
 };
 
 function createtemplate (data) {
@@ -68,7 +92,7 @@ app.get('/article1', function (req, res) {
 });
 
 app.get('/article2', function (req, res) {
-  res.send('Article2 requested');
+  res.send(createtemplate(article2));
 });
 
 app.get('/article3', function (req, res) {
