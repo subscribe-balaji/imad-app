@@ -92,6 +92,7 @@ app.get('/:articlename', function (req, res) {
   res.send(createTemplate(articles[articlename]));
 });
 
+/*
 app.get('/article2', function (req, res) {
   res.send(createTemplate(articles[article2]));
 });
@@ -99,7 +100,7 @@ app.get('/article2', function (req, res) {
 app.get('/article3', function (req, res) {
   res.send('Article3 requested');
 });
-
+*/
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
