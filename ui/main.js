@@ -4,6 +4,6 @@ newvar.innerHTML = "Changed text";
 
 var newvar = document.getElementById('madi');
 newvar.onclick = function() {
-    newvar.style.marginleft = '90px';
+    newvar.style.marginLeft = '90px';
 };
     
