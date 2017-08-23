@@ -13,3 +13,16 @@ button.onclick = function() {
     request.open('GET', 'http://subscribebalaji.imad.hasura-app.io/counter', true);
     request.send(null);
 };
+
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submnit = document.getElementById('submitbtn');
+submit.onclick = function () {
+    var names = ['name1', 'name2'];
+    var list = [];
+    for(i=0; i<names.length; i++) {
+        list += '<li>' + namees[i] + '</li>';
+    }
+    var ul = document.getElementById('namelist')
+    ul.innerHTML = list;
+}
